@@ -1,19 +1,19 @@
 import java.util.*;
-public class plusOne {
+public class PlusOne {
     public static void main(String[] args) {
         int[] num = {1, 0,3,9};
         System.out.println("before ");
         for (int i : num) {
             System.out.print(i);
         }
-        int[] res = plusOne(num);
+        int[] res = addOne(num);
         System.out.println("\n after ");
         for (int i : num) {
             System.out.print(i);
         }
 
    } 
-   public static int[] plusOne(int[] digits) {
+   public static int[] addOne(int[] digits) {
     for (int i = digits.length-1; i >= 0; i--) {
         if (digits[i] < 9) {
             digits[i]++;

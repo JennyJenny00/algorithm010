@@ -73,7 +73,7 @@ Part 2
 206. reverse linked list Recursive ❌ 递归的终止条件是自己不为空且下一个也不为空，如果就一个元素也没必要递归！脑子真的坏了。。 Iterative❌ head = next 不是head.next我可能是对这个题有执念，像一个永远背不下来的单词。。
 66. plus one 四个月前AC过一次。✅现在想来应该是从末尾开始加一，但是问题在于如果要多一位就要在初始时就申请。只需要分别处理<9 和等于9就行了 如果有进位就新开辟一个数组return
 1. Two Sum ✅主要是考察hash操作，一个是要在放之前check是否有其complement在里面，而是给定的数中没有重复，所以key可以是nums[i]
--TODO
+-TODO⏸
 239. Sliding Window Maximum 
 84. Largest Rectangle in Histogram 
 25. reverse nodes in k-group 太麻烦了。。明天再说
@@ -87,6 +87,34 @@ Part 2
 
 ····Thuresday
 155. stack with min() ❌ 要注意数据结构的定义，先成员变量，再构造函数
+84. Largest Rectangle in Histogram  ✅抄好 再次体会 每次求的是poll出来的index和再peek的index之间的面积
+21. Merge Two Sorted Lists ✅完美搞定iterative写法，不过遇到Linked List可以先思考递归解法 明天可以默一下递归版
+88. Merge Sorted Array ✅不要忘记postprocess
+9. Palindrome Number ✅ 拆出int每一位的操作要熟练
+25. reverse nodes in k-group ✅抄完 这个reverse 操作真是妙，先把后半部分的头找到，然后从后往前依次扭转
+ ListNode next = tail.next.next;
+                tail.next.next = prev.next;
+                prev.next = tail.next;
+                tail.next = next;
+26. Remove Duplicates from Sorted Array ✅跟 283. movezeroes很像 bn
+189. Rotate Array ✅这个跟557. Reverse Words in a String III很像，先整体翻转再单独翻转就会得到想要的结果
+        k %= nums.length;
+注意预处理这个K
+-TODO
+242. Valid Anagram 做过 预习要重做
+94. Binary Tree Inorder Traversal 做过 预习要重做
+239. Sliding Window Maximum 要二刷
+作业差两题：
+641. Design Circular Deque  
+42. Trapping Rain Water 
+
+.....Firday
+622. Design Circular Queue ✅看到评论说类似就先抄一遍这个 再照着推一下 641. 感觉异曲同工，不过就是多两个function
+
+641. Design Circular Deque花了很久时间。。感觉比622难理解很多不知道是不是自己状态不太对。不能很好的理解。
+242. Valid Anagram ✅可以进一步优化，使小于0就直接返回，居然还不需要check空的情况。。
+
+
 
 
 
