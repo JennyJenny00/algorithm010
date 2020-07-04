@@ -1,9 +1,13 @@
 学习笔记
+----------------------------------------------------------------------------------
+使用二分查找，寻找一个半有序数组 [4, 5, 6, 7, 0, 1, 2] 中间无序的地方
+说明：同学们可以将自己的思路、代码写在学习总结中
+----------------------------------------------------------------------------------
+这个中间无序的地方指代不明 也没有例子。做不了。
+
 感觉这周的步调更快了。。得多投入些时间了
 ～Sunday 快速看完了本周的视频。感觉内容太多了。
-import java.util.*;
 ·Monday
-
 102. Binary Tree Level Order Traversal✅
 差点忘记。。还是得勤练。。
 level用dfs实现可以一会试试感觉挺新颖
@@ -67,5 +71,10 @@ https://labuladong.gitbook.io/algo/di-ling-zhang-bi-du-xi-lie/dong-tai-gui-hua-x
 367. Valid Perfect Square ✅找了老半天不同 感觉快疯了 但是发现了问题！ 注意怎么避免overflow和如何check，binary search就不要写else！ 把所有的情况都展开最好
 69. Sqrt(x)✅要注意用除代替乘 不要overflow 
 33. Search in Rotated Sorted Array✅感觉先找到断点 然后预处理好left 和right 在具体的binary search里就可以按原来的路子走了特别好。
-
+·····Friday ⏸休息
+······Saturday
+153. Find Minimum in Rotated Sorted Array ❌是之前的33的其中的一个function 之前没有注意 这次发现，必须用while (left < right) right = mid;因为
+“nums[mid] > nums[mid + 1] Hence, mid+1 is the smallest.
+nums[mid - 1] > nums[mid] Hence, mid is the smallest.” 细节是魔鬼。。
+74. Search a 2D Matrix ✅感觉快被逼疯。。一看到2D array的题就很烦躁..就是要很细心！
  
