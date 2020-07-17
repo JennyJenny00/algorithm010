@@ -3,7 +3,7 @@
 使用二分查找，寻找一个半有序数组 [4, 5, 6, 7, 0, 1, 2] 中间无序的地方
 说明：同学们可以将自己的思路、代码写在学习总结中
 ----------------------------------------------------------------------------------
-这个中间无序的地方指代不明 也没有例子。做不了。
+这个中间无序的地方指代不明 也没有例子。没明白题。做不了。
 
 感觉这周的步调更快了。。得多投入些时间了
 ～Sunday 快速看完了本周的视频。感觉内容太多了。
@@ -77,4 +77,3 @@ https://labuladong.gitbook.io/algo/di-ling-zhang-bi-du-xi-lie/dong-tai-gui-hua-x
 “nums[mid] > nums[mid + 1] Hence, mid+1 is the smallest.
 nums[mid - 1] > nums[mid] Hence, mid is the smallest.” 细节是魔鬼。。
 74. Search a 2D Matrix ✅感觉快被逼疯。。一看到2D array的题就很烦躁..就是要很细心！
- 
