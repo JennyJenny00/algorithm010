@@ -1,1 +1,42 @@
 学习笔记
+
+·Sunday
+居然一转眼就week08了。。震惊。感觉这周任务量不大，是位运算和排序，可以有空把week06的补补
+位运算的要点
+位运算的比较级在这里列了出来，top to bottom
+https://en.cppreference.com/w/c/language/operator_precedence
+
+“
+1. 将x最右边的n位清零： x&(~0<<n) <<是4 ~是2 所以先取反 再左移n位得到n个0，再&就清零了
+2. 获取x的第n位的值： (x>>n)&1 x右移n位 n右边的数都抹掉，再和0001相与，就得到了只有n位的值
+3. 获取x的第n位的幂值： x&(1<<n)
+4. 将第n位置为1 ： x|(1<<n) 
+5. 将第n位置为1 ： x&(~(1<<n))
+6. 将x最高位至第n位（含）清零： x&((1<<n) - 1) 1000 - 1 = 000111
+7. 判断奇偶:
+    奇数： (x&1) == 1
+    偶数： (x&1) == 0
+8. 除2运算
+    x/2 转化为： x>>1
+9. 清零最低位的1： x = x&(x - 1) eg. x = 1001 1000
+10. 得到最低位的1： x &(-x)
+”
+191. Number of 1 Bits ✅在Java中没有无符号数，所以会超， 
+"Java uses two's complement for negative numbers and the basic rule is to take the positive, invert all bits then add one"
+所以3是 00000000 00000000 00000000 00000011 
+取反:   11111111 11111111 11111111 11111100
+加1:    11111111 11111111 11111111 11111101 变成 -3 因为1代表负数， 101
+
+>> is arithmetic shift right,也就是 unsigned shift 插入0； 
+>>> is logical shift right.对于负数保留前面的负号 也就是一向右移插入的是1
+所以这个题里要逻辑右移，保留负号
+
+231. Power of Two ✅ =>转换成 有且仅有一个二进制位是1 就一句话 return n>0 && (n&(n-1))==0;
+    特别妙啊，但是我之前比较迷惑的是以为还要转化成binary 但是其实不用，在用&时已经自动转化了 n&(n-1)就是打掉第一个1， 这样如果只剩0 就对了
+
+·Monday
+190. Reverse Bits✅ 还是很奇妙的 要注意套路
+ 从右往左处理， eg 13: 1101 从右开始，是1 那就加1然后挪，循环32次后这个1变成了头，一开始的n不断右移，最终的结果不断左移
+160. Intersection of Two Linked Lists ✅做着玩玩，好久之前做过，现在都忘了。。链表题还是很好玩的！就是套路比较固定。。
+52. N-Queens II ✅抄了一下最佳，很奇妙了 真的是终极解法 用hills and dales也是妙了
+338. Counting Bits ✅ dp方程 dp[i] = dp[i<<1] + i&1;
