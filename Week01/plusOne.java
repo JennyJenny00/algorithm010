@@ -6,23 +6,23 @@ public class PlusOne {
         for (int i : num) {
             System.out.print(i);
         }
-        int[] res = addOne(num);
+        int[] res = plusHelper(num);
         System.out.println("\n after ");
         for (int i : num) {
             System.out.print(i);
         }
 
    } 
-   public static int[] addOne(int[] digits) {
-    for (int i = digits.length-1; i >= 0; i--) {
-        if (digits[i] < 9) {
-            digits[i]++;
-            return digits;
+   public static int[] plusHelper(int[] digits) {
+        for (int i = digits.length-1; i >= 0; i--) {
+            if (digits[i] < 9) {
+                digits[i]++;
+                return digits;
+            }
+            digits[i] = 0;
         }
-        digits[i] = 0;
+        int[] res = new int[digits.length + 1];
+        res[0]=1;
+        return res;
     }
-    int[] res = new int[digits.length + 1];
-    res[0]=1;
-    return res;
-}
 }
